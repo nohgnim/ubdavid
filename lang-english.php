@@ -12,7 +12,7 @@ define("_ANSWER_UMMATCHED","<h1>Sorry!</h1><P>Number of answers submitted does n
 define("_FAILED_MSG","<h1>Sorry!</h1><P>You did not pass this lesson.  Please use your browser's BACK button to go back and check your answers, then try submitting them again.</p>");
 define("_NO_EMAILADDRESS","<h1>Error!</h1><P>No grader's email address available in the database.  Please contact the owner of the website regarding this problem.</p>");
 define("_LESSON_RESULTS","Lesson results");
-define("_QUESTIONS_INCORRECT","Question number(s) answered incorrectly:");
+define("_QUESTIONS_INCORRECT","Questions answered incorrectly are these numbers:");
 define("_NONE","None");
 define("_CONGRATULATIONS","Congratulations!");
 define("_SUCCESSFULLY_COMPLETED","You have successfully completed this lesson and have been awarded [LESSONPTS] points, bringing your total score up to [TOTALPTS] points!");

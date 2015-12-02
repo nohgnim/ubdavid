@@ -1,0 +1,1207 @@
+@charset "utf-8";
+/* CSS Document */
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* GLOBAL STYLES - seems to affect ONLY desktop */
+#mainContent p {
+	font-weight: normal; font-size: 0.875em; line-height: 1.6; margin: 0 0 0.625em;
+}
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	max-width:1232px;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+.centerText {
+	text-align: center;
+}
+#icon {
+	margin-left: 1%;
+	min-height: 40px;
+	background-image: url(../images/icon40.png);
+	background-position: left bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#breadcrumbs {
+	background-color: #2c3e50;
+	height: 1em;
+	max-width: 99%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+#breadcrumbs p {
+	font-family: Verdana, Helvetica, sans-serif;
+	color:#ecf0f1;
+	font-size: 0.688em;
+	vertical-align: middle;
+}
+.gridContainer #breadcrumbs a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+	color: #2980B9;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+.gridContainer #breadcrumbs a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #3498db;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+#aside {
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+	display: none;
+}
+#aside h2 {
+	font-family: Tahoma, Verdana, sans-serif;
+	text-align: center;
+	font-size: 1em;
+	line-height: 110%;
+}
+#aside a:link, #aside a:visited {
+	color: #2980B9;
+}
+#aside a:hover {
+	color: #3498DB;
+}
+#mainContent {
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+}
+#mainContent  a:link, #mainContent a:visited {
+	color: #c0392b;
+	font-weight: normal;
+	text-decoration: none;
+}
+#mainContent  a:hover {
+	color: #e74c3c;
+	font-weight: normal;
+	text-decoration: underline;
+}
+#mainContent ul {
+	font-family:Verdana, Tahoma, Arial, sans-serif;
+	list-style-position: outside;
+	list-style-image: url(../images/green-bullet8px.png);
+	list-style-type: none;
+}
+#mainContent ul li {
+/*	line-height:1.5em;
+	font-size:0.875em;*/
+	line-height:1.65rem;
+	font-size:1.0rem;
+}
+#mainContent ul li .bold {
+	line-height:1.65em;
+/*	vertical-align:text-bottom;*/
+	font-family:Verdana, Tahoma, Arial, sans-serif;
+	font-size:1.0rem;
+	font-weight:bold;
+}
+#mainContent ol {
+	font-family:Verdana, Tahoma, Arial, sans-serif;
+/*	font-size:.875em;*/
+	font-size:1.0rem;
+	list-style-position: outside;
+}
+#mainContent ol li {
+	line-height:1.65em;
+}
+#mainContent ul li ol li {
+	line-height:1.65em;
+	font-size:1.2em;
+}
+h1,h2,h3,h4,p {
+ font-family: inherit;
+ font-size: inherit;
+}
+.bold {
+	font-weight:bold;
+}
+.boldItalic {
+	font-weight:bold;
+	font-style:italic;	
+}
+.bold14 {
+	font-weight:bold;
+	font-size: 1.1em;	
+}
+.italic {
+	font-style:italic;
+}
+#mainContent .subtitle {
+	font-family: amaranth, "Maiandra GD", sans-serif;
+	font-size: 24px;
+    font-size: 1.5rem;
+	color:#2ecc71;
+	font-weight: bold;
+	text-align: center;
+}
+#mainContent .darkblue {
+	color:#45617d;
+	font-weight:normal;
+}
+#mainContent .strongDarkblue {
+	color:#45617d;
+	font-weight:bold;
+}
+#mainContainer #mainContent .strongDarkblueItalic {
+	color:#45617d;
+	font-weight:bold;
+	font-style:italic;
+}
+#aside .strongDarkblue {
+	color:#45617d;
+	font-weight:bold;
+}
+#mainContent .purple {
+	color:#8e44ad;
+}
+#mainContent .strongPurple {
+	color:#8e44ad;
+	font-weight: bold;
+}
+#mainContent .purpleItalic {
+	color:#8e44ad;
+	font-style:italic;
+}
+#mainContent .strongPurpleItalic {
+	color:#8e44ad;
+	font-style:italic;
+	font-weight: bold;
+}
+#mainContent .strongPurple14 {
+	color:#8e44ad;
+	font-weight: bold;
+	font-size:1.1em;
+}
+#mainContent .purpleSubtitle {
+	color:#8e44ad;
+	font-weight: normal;
+	font-size:1.4em;
+	font-family: amaranth, "Maiandra GD", sans-serif;
+}
+#mainContent .strongGreen {
+	color:#16a085;
+	font-weight:bold;
+}
+#mainContent .strongGreen14 {
+	color:#16a085;
+	font-weight:bold;
+	font-size:1.1em;
+}
+#mainContent .green {
+	color:#16a085;
+	font-weight:normal;
+}
+#mainContent .boldGreenItalic {
+	color:#16a085;
+	font-weight:bold;
+	font-style:italic;
+}
+#mainContent .strongGreenItalic {
+	color:#16a085;
+	font-weight:bold;
+	font-style:italic;
+}
+#mainContent .strongGreenItalic14 {
+	color:#16a085;
+	font-weight:bold;
+	font-style:italic;
+	font-size:1.1em;
+}
+#mainContent .strongGold {
+	color: #f1c40f;
+	font-weight: bold;
+}
+#mainContent .gold {
+	color:#ff1c40f;
+	font-weight:normal;
+}
+#mainContent .strongBrown {
+	color: #b06e00;
+	font-weight: bold;
+}
+#mainContent .strongBrownItalic {
+	color: #b06e00;
+	font-weight: bold;
+	font-style:italic;
+}
+#mainContent .strongBrown14 {
+	color: #b06e00;
+	font-weight: bold;
+	font-size:1.1em;
+}
+#mainContent .blue {
+	color:#2980b9;
+	font-weight:normal;
+}
+#mainContent .blueItalic {
+	color:#2980b9;
+	font-weight:normal;
+	font-style:italic;
+}
+#mainContent .strongBlue {
+	color:#2980b9;
+	font-weight:bold;
+}
+#aside .strongBlue {
+	color:#2980b9;
+	font-weight:bold;
+}
+#aside .strongDarkblueItalic {
+	color:#45617d;
+	font-weight:bold;
+	font-style:italic;
+}
+#mainContent .strongBlueItalic {
+	color:#2980b9;
+	font-weight:bold;
+	font-style:italic;
+}
+#mainContent .strongBlue14 {
+	color:#2980b9;
+	font-weight:bold;
+	font-size:1.1em;
+}
+#mainContent .strongBlueItalic14 {
+	color:#2980b9;
+	font-weight:bold;
+	font-style:italic;
+	font-size: 1.1em;
+}
+#Submit .login .strongBlue14 {
+	color:#2980b9;
+	font-weight:bold;
+	font-size:1em;	
+}
+
+#mainContent .strongRed {
+	color:#c0392b;
+	font-weight:bold;
+}
+#mainContent .strongRedItalic {
+	color:#c0392b;
+	font-weight:bold;
+	font-style:italic;
+}
+#mainContent .strongRed14 {
+	color:#c0392b;
+	font-weight:bold;
+	font-size: 1.1em;
+}
+#aside .strongRed14 {
+	color:#c0392b;
+	font-weight:bold;
+	font-size: 1.1em;
+}
+#mainContent .red {
+	color:#c0392b;
+	font-weight:normal;
+}
+#mainContent .redItalic {
+	color:#c0392b;
+	font-weight:normal;
+	font-style:italic;
+}
+#mainContent .strongOrange {
+	color:#e67e22;
+	font-weight:bold;
+}
+#mainContent .strongOrangeItalic {
+	color:#e67e22;
+	font-weight:bold;
+	font-style:italic;
+}
+#mainContent .strongOrangeItalic14 {
+	color:#e67e22;
+	font-weight:bold;
+	font-style:italic;
+	font-size: 1.1em;
+}
+#mainContent .orange {
+	color:#e67e22;
+	font-weight:normal;
+}
+#mainContent .prayer {
+	font-family: amaranth, "Maiandra GD", sans-serif;
+	color:#2980b9;
+	font-weight: normal;
+	font-size: 1.1em;
+	line-height: 1.4em;
+	font-style:italic;
+	padding-left: 1.25em;	
+}
+.boldRedBible {
+	font-family: "Maiandra GD", Verdana, sans-serif;
+	color: #c0392b;
+	font-weight:normal;
+	font-size: 1.1em;
+	font-style: italic;
+	line-height: 1.4em;
+}
+#mainContent .bibleIndent {
+	font-family: amaranth, "Maiandra GD", sans-serif;
+	font-weight: normal;
+	font-size: 1.25em;
+	line-height: 1.35em;
+	font-style: italic;
+	color: #c0392b;
+	padding-right: 1.25em;
+	padding-left: 1.25em;
+}
+.hide {
+	display:none;
+}
+.floatLeft {
+	margin-right: 1em;
+	margin-bottom: .625em;
+	float: left;
+}
+.floatLeftShadow {
+	margin-right: 1em;
+	margin-bottom: .625em;
+	float: left;
+	-moz-box-shadow: 3px 5px 5px 2px #888;
+	-webkit-box-shadow: 3px 5px 5px 2px #888;
+	box-shadow: 3px 5px 5px 2px #888;
+}
+.floatRight {
+	margin-left: 1em;
+	float: right;
+	margin-bottom: .625em;
+}
+.floatRightShadow {
+	margin-left: 1em;
+	float: right;
+	margin-bottom: .625em;
+	-moz-box-shadow: 3px 5px 5px 2px #888;
+	-webkit-box-shadow: 3px 5px 5px 2px #888;
+	box-shadow: 3px 5px 5px 2px #888;
+/*	ORIG: box-shadow: 3px 4px 5px 1px #555;*/
+}
+.indent1 {
+	padding-left: 1.25em;
+}
+.indent2 {
+	padding-left: 2.5em;	
+}
+.indent3 {
+	padding-left: 3.75em;	
+}
+.indent4 {
+	padding-left: 5em;	
+}
+textarea {
+	background-image: url(../images/textarea-gradient.png);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	padding: 5px;
+	border: 1px solid #888888;
+	margin-left: 0;
+	display: block;
+	width: 90%;	
+}
+#mainContent .questionsLink {
+	font-family: "Maiandra GD", "Trebuchet MS", sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+#mainContent .questionsLink a:link, a:visited {
+	font-family: "Maiandra GD", "Trebuchet MS", sans-serif;
+	font-size: 1.25em;
+	font-weight: normal;
+	color:#2980b9;
+}
+#mainContent .questionsLink a:hover {
+	font-family: "Maiandra GD", "Trebuchet MS", sans-serif;
+	font-size: 1.25em;
+	font-weight: normal;
+	color:#2ecc71;
+}
+.blockHorizontal {
+	background-color: #fbf0c3;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalGreen {
+	background-color: #c6eee6;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalGreen2 {
+	background-color: #bbe5c1;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalPurple {
+	background-color: #f0e6f4;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalBlue {
+	background-color: #cce5f6;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalGold {
+	background-color: #fce480;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalOrange {
+	background-color: #f9dfc8;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalGrey {
+	background-color: #e3e3e3;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.blockHorizontalRed {
+	background-color: #fac1bb;
+	padding: .625em;
+	width: 90%;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: ridge;
+	border-bottom-style: solid;
+	border-top-color: #34495e;
+	border-bottom-color: #34495e;
+	margin: .625em;
+}
+.backgroundGold {
+	background-color:#f1c40f;
+	padding: .15em 0 .1em .5em;
+}
+.backgroundOrange {
+	background-color:#f9dfc8;
+}
+.backgroundGreen {
+	background-color:#c6eee6;
+}
+.backgroundBlue {
+	background-color:#cce5f6;
+}
+.backgroundRed {
+	background-color:#fac1bb;
+}
+.backgroundPurple {
+	background-color:#f0e6f4;
+}
+.videoTitle {
+	margin:auto;
+	max-width:400px;
+}
+.videoContainer {
+	max-width: 100%;
+}
+.clearRight {
+	clear:right;
+}
+.clearLeft {
+	clear:left;
+}
+.clearBoth {
+	clear:both;	
+}
+.max600 {
+	max-width: 600px;
+}
+.max620 {
+	max-width: 620px;
+}
+.insetQuotation {
+	padding-right: 2.5em;
+	padding-left: 2.5em;	
+}
+.insetQuoteItalics {
+	padding-right: 2em;
+	padding-left: 2em;
+	font-style: italic;
+}
+.left {
+	margin-left:0;
+}
+#mainContent .smallText {
+	font-size:0.75em;
+	line-height:1.25em;
+	vertical-align:baseline;
+}
+#mainContent .smallTextItalics {
+	font-size:0.85em;
+	line-height:1.25em;
+	font-style: italic;
+	vertical-align:baseline;
+}
+#mainContent .smallTextLink {
+	font-size:0.75em;
+	line-height:1.25em;
+	font-style: italic;
+}
+#aside .smallText {
+	font-size:0.7em;
+	line-height:1.45em;
+}
+.marginTop {
+	margin-top: .25em;
+}
+.calloutLeft {
+	background-color: #fbf0c3;
+	font-family:Tahoma, Verdana, sans-serif;
+	font-size: 1.2em;
+	line-height: 1.35em;
+	font-weight: normal;
+	color: #c0392b;
+	text-align: center;
+	float: left;
+	max-width: 10em;
+	margin-right: 1.25em;
+	margin-bottom: 0.625em;
+	padding-top: 0.625em;
+	padding-right: 0.625em;
+	padding-bottom: 0.625em;
+	padding-left: 0.625em;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #f39c12;
+	border-bottom-color: #f39c12;	
+}
+#mainContainer #mainContent .calloutRight {
+	background-color: #fbf0c3;
+	font-family:Tahoma, Verdana, sans-serif;
+	font-size: 1.2em;
+	line-height: 1.35em;
+	font-weight: normal;
+	color: #c0392b;
+	text-align: center;
+	float: right;
+	max-width: 10em;
+	margin-left: 1.25em;
+	margin-bottom: 0.625em;
+	padding-top: 0.625em;
+	padding-right: 0.625em;
+	padding-bottom: 0.625em;
+	padding-left: 0.625em;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #f39c12;
+	border-bottom-color: #f39c12;	
+}
+.videomax400 {
+	max-width: 400px;	
+}
+.videomax200 {
+	max-width: 200px;	
+}
+
+/* Desktop Layout: 769px to a max of 1232px. Also affects TABLET LANDSCAPE */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#mainContent p {
+	font-size: 0.875em; line-height: 1.6; margin-right: 1em;
+}
+#mainContent ul {
+/*	font-size: 1em;*/
+	font-size: 1rem;
+}
+#mainContent ol {
+/*	font-size: 0.875em;*/
+	font-size: 1rem;
+}
+#mainContainer #mainContent ul .bibleIndent {
+	font-size: 1em;
+}
+#breadcrumbs {
+	background-color: #2c3e50;
+	height: 1em;
+	max-width: 99%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+#breadcrumbs p {
+	font-family: Verdana, Helvetica, sans-serif;
+	color:#ecf0f1;
+	font-size: 0.688em;
+	vertical-align: middle;
+}
+#aside {
+	width: 28.808%;
+	margin-left: 1.6949%;
+	clear: none;
+	float: left;
+	padding-top: 1.875em;
+	padding-right: 1.7%;
+	padding-bottom: 1%;
+	text-align: left;
+	vertical-align: top;
+	display: block;
+}
+#mainContent {
+	width: 62.1016%;
+	margin-left: 1.6949%;
+	clear: none;
+	float: right;
+	padding: 1% 2% 1% 2%;
+}
+#mainContainer #mainContent .calloutRight {
+	background-color: #fbf0c3;
+	font-family:Tahoma, Verdana, sans-serif;
+	font-size: 1.2em;
+	line-height: 1.35em;
+	font-weight: normal;
+	color: #c0392b;
+	text-align: center;
+	float: right;
+	max-width: 10em;
+	margin-left: 1.25em;
+	margin-bottom: 0.625em;
+	padding-top: 0.625em;
+	padding-right: 0.625em;
+	padding-bottom: 0.625em;
+	padding-left: 0.625em;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #f39c12;
+	border-bottom-color: #f39c12;	
+}
+#footer {
+	background-color: #7F8C8D;
+	clear: both;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#footer p {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 0.75em;
+	text-align:center;
+	color: #ECF0F1;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+#footer .footerLinks {
+	float:none;
+}
+#footer a:link, a:visited {
+	color: #F1C40F;
+	text-decoration:none;
+}
+#footer a:hover {
+	color: #fff;
+	text-decoration:underline;	
+}
+#footer .copyright p {
+	font-size: 0.65em;
+	line-height: 1.25em;
+	padding-top: 1em;	
+}
+
+}
+
+/* Special instruction for unfloating right-floated images - orig set to max 692 */
+@media only screen and (max-width: 550px) {
+.floatRight {
+	float:none;	
+	display:block;
+	margin: 0 auto .75em auto;
+}
+.floatRightShadow {
+	float:none;	
+	display:block;
+	margin: 0 auto .75em auto;
+}
+
+}
+
+/* this affects TABLET PORTRAIT & S3 LANDSCAPE */
+@media only screen and (min-width: 551px) and (max-width: 646px) {
+
+#mainContainer #mainContent p {
+	font-size: 1.25em; line-height: 1.5; margin-right: 0.7em;
+}
+#mainContainer #mainContent ul {
+	font-size: 1.5em;
+}
+#mainContent ol {
+	font-size: 1.5em;
+}
+#mainContainer #mainContent ul .bibleIndent {
+	font-size: .9em;
+}
+#mainContent .calloutRight {
+	margin-left: 1.4em;	
+}
+#mainContainer #mainContent .smallText {
+	font-size:0.85em;
+	line-height:1.4em;
+	vertical-align:baseline;
+}
+.insetQuotation {
+	padding-right: 1.5em;
+	padding-left: 1.5em;	
+}
+.insetQuoteItalics {
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	font-style: italic;
+}
+}
+
+/* Special instructions to increase font size in tablets but not desktops; affects TABLET LANDSCAPE */
+@media only screen and (min-width: 769px) and (max-width: 965px) {
+#mainContent p {
+	font-size: 1.2em; line-height: 1.5; margin-right: 0.5em;
+}
+#mainContent .bibleIndent {
+	font-size: 1.25em;
+	font-family: amaranth, "Maiandra GD", sans-serif;
+	font-weight: normal;
+	line-height: 1.35em;
+	font-style: italic;
+	color: #c0392b;
+	padding-right: 1.25em;
+	padding-left: 1.25em;
+}
+#mainContent .boldRedBible {
+	font-size: 1em; line-height: 1.4;	
+}
+form input[type=text] {
+	height: 2em;
+	width: 8em;
+	margin-bottom: .5em;
+}
+/*.video2 {
+	display:none;
+}*/
+/*.hide {
+	display:block;
+	margin: .5em auto .5em auto;
+	text-align: center;		
+}*/
+#mainContent ul {
+	font-size: 1.45em;
+}
+#mainContent ol {
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+#mainContent .calloutRight {
+	margin-left: 1.4em;	
+}
+#mainContent .smallText {
+	font-size:0.85em;
+	line-height:1.35em;
+	vertical-align:baseline;
+}
+
+}
+/* Tablet Layout: orig set to 481px to 768px. These rules do not seem to affect any of my devices, portrait or landscape. */
+
+@media only screen and (min-width: 647px) and (max-width: 768px) {
+
+.gridContainer {
+	width: 90.675%;
+	max-width: 768px;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#mainContent p {
+	font-size: 1.2em; line-height: 1.4; margin-right: 0.5em;
+}
+#mainContent .bibleIndent {
+	font-size: 1.2em;
+	font-family: amaranth, "Maiandra GD", sans-serif;
+	font-weight: normal;
+	line-height: 1.2em;
+	font-style: italic;
+	color: #c0392b;
+	padding-right: 1.25em;
+	padding-left: 1.25em;
+}
+#mainContent .smallText {
+	font-size:0.75em;
+	line-height:1.25em;
+	vertical-align:baseline;
+}
+#mainContent ul {
+	font-size: 1.25em;
+	line-height: 1em;
+}
+#mainContent ol {
+	font-size: 1.25em;
+}
+form input[type=text] {
+	height: 2em;
+	width: 8em;
+	margin-bottom: 1em;
+}
+#breadcrumbs {
+	background-color: #2c3e50;
+	width: 99%;
+	padding-left: 1%;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	height: 1em;
+}
+#breadcrumbs p {
+	font-family: Tahoma, Verdana, sans-serif;
+	color:#ecf0f1;
+	font-size: 0.875em;
+	vertical-align: middle;
+}
+.gridContainer #breadcrumbs a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+	color: #2980B9;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+.gridContainer #breadcrumbs a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #3498db;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+#aside {
+	width: 28.808%;
+	clear: both;
+	margin-left: 1.6949%;
+	float: left;
+	padding-top: 1.875em;
+	padding-right: 1.7%;
+	padding-bottom: 1%;
+	text-align: left;
+	vertical-align: top;
+	display: block;
+}
+#aside p {
+	font-size:.875em;
+	line-height:1.5em;
+}
+#mainContent {
+	width: 62.1016%;
+	clear: none;
+	margin-left: 1.6949%;
+	float: right;
+	padding: 1.5% 2% 1% 2%;
+}
+#mainContent .calloutRight {
+	margin-left: 1em;	
+}
+.insetQuotation {
+	padding-right: 1.5em;
+	padding-left: 1.5em;	
+}
+.insetQuoteItalics {
+	padding-right: 1.1em;
+	padding-left: 1.1em;
+	font-style: italic;
+}
+#footer {
+	background-color: #7F8C8D;
+	clear: both;
+	padding-top:1%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#footer p {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 0.65em;
+	line-height: 2em;
+	text-align:center;
+	color: #ECF0F1;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+#footer .copyright p {
+	line-height:1.25em;
+	padding:0.5em 0 0.75em 0;	
+}
+#footer .footerLinks {
+	float:none;
+}
+#footer .footerLinks p {
+	font-size: 0.85em;	
+}
+#footer a:link, a:visited {
+	color: #F1C40F;
+	text-decoration:none;
+}
+#footer a:hover {
+	color: #fff;
+	text-decoration:underline;	
+}
+.video2 {
+	display:none;
+}
+.hide {
+	display:block;
+	margin: .5em auto .5em auto;
+	text-align: center;		
+}
+
+}
+
+/* Mobile Layout: orig set to 480px and below. Affects TABLET PORTRAIT, S3 portrait & landscape, iPod both. */
+@media only screen and (max-width: 646px) {
+
+#mainContent p {
+	font-size: 1em; line-height: 1.5;	
+}
+#mainContent .bibleIndent {
+	font-size: 1.25em;
+	font-family: amaranth, "Maiandra GD", sans-serif;
+	font-weight: normal;
+	line-height: 1.3em;
+	font-style: italic;
+	color: #c0392b;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+#mainContainer #mainContent ul .bibleIndent {
+	font-size: 1em;
+}
+#mainContent .boldRedBible {
+	font-size: 1em; line-height: 1.5;	
+}
+.gridContainer.clearfix {
+	width: 100%;
+	max-width: 646px;
+	padding:0;
+}	
+#breadcrumbs {
+	width: 98%;
+	background-color: #2c3e50;
+	padding: 1% 0 2% 2%;
+}
+#breadcrumbs p {
+	font-family: Tahoma, Verdana, sans-serif;
+	color:#ecf0f1;
+	font-size: .85em;
+	vertical-align: middle;
+}
+.gridContainer #breadcrumbs a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+	color: #2980B9;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+.gridContainer #breadcrumbs a:hover {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #3498db;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+#mainContainer {
+	width: 100%;
+	max-width: 646px;
+}
+#mainContent {
+	background-color: #FFFFFF;
+	padding-top: 1.5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
+	padding-left: 3%;
+	max-width: 90%;
+}
+#mainContent ul {
+	font-size: 1.15em;
+	line-height: .75em;
+}
+#mainContent ol {
+	font-size: 1.15em;
+	line-height: .875em;
+}
+#mainContainer #mainContent .index ul {
+	font-size: 1.2em;
+	line-height: 1em;
+}
+.hide {
+	display:block;
+	margin: .5em auto .5em auto;
+	text-align: center;		
+}
+.hideImg {
+	display:none;
+}
+#video {
+	display:none;	
+}
+.video2 {
+	display:none;
+}
+.insetQuoteItalics {
+	padding-right: 1em;
+	padding-left: 1em;
+	font-style: italic;
+}
+#footer {
+	background-color: #7F8C8D;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	max-width:98%;
+}
+#footer p {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 0.65em;
+	text-align: center;
+	line-height: 2em;
+	color: #ECF0F1;
+	margin-left: 3%;
+	margin-right: 5%;
+}
+#footer .copyright p {
+	line-height:1.25em;
+	padding:0.5em 0 0.75em 0;	
+}
+#footer .footerLinks {
+	float:none;
+}
+#footer .footerLinks p {
+	font-size: 0.85em;	
+}
+#footer a:link, a:visited {
+	color: #F1C40F;
+	text-decoration:none;
+}
+#footer a:hover {
+	color: #fff;
+	text-decoration:underline;	
+}
+#mainContent .smallText {
+	font-size:.85em;
+	line-height:1.5em;
+}
+.calloutLeft {
+	display:none;	
+}
+.calloutRight {
+	display:none;	
+}
+#mainContent .calloutRight {
+	margin-left: 1em;	
+}
+}
