@@ -120,7 +120,7 @@
   </div><!--end topHead-->
   
 <div id="breadcrumbs" class="fluid">
-  <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; Registration</div>
+  <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; Lesson Results</div>
      
   <div id="mainContainer" class="fluid">
 		<div id="mainContent" class="fluid">
