@@ -2,12 +2,12 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en">
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es">
 <!--<![endif]-->
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -120,7 +120,7 @@
   </div><!--end topHead-->
   
 <div id="breadcrumbs" class="fluid">
-  <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; Lesson Results</div>
+  <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; Resultados</div>
      
   <div id="mainContainer" class="fluid">
 		<div id="mainContent" class="fluid">

@@ -6,7 +6,7 @@
     
     <div class="copyright">
     <p>	Copyright &copy; 2003 U.B. David &amp;&nbsp;I'll B. Jonathan, Inc.
-		Mailbox Club Lessons Copyright &copy; 1997-2003, The Mailbox Club International;
+		Mailbox Club Lessons Copyright &copy; 1997-2016, The Mailbox Club International;
 		usado con permiso con adaptación para el internet por Vaughan V. Durston, presidente, UB David and I'll B Jonathan Inc.
 		Reservados todos los derechos.</p>
     </div><!-- end copyright -->

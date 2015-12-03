@@ -558,7 +558,13 @@ function get_header() {
     ";
 	$r_result .= "<table class=\"grader\"><tr><td>";
 
-	$r_result = implode("",file("header.tpl"));
+	if ($f_language == 'S') {
+		$r_result = implode("",file("header_sp.tpl"));
+	} elseif ($f_language == 'F') {
+		$r_result = implode("",file("header.tpl"));
+	} else {
+		$r_result = implode("",file("header.tpl"));
+	}
 	
 	return $r_result;
 }
