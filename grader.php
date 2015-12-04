@@ -538,13 +538,14 @@ function check_lesson($lid) {
 }
 
 function display_message($f_message, $f_language = 'E') {
-	$r_result  = get_header();
+	$r_result  = get_header($f_language);
+	$f_message = utf8_encode($f_message);
 	$r_result .= $f_message;
 	$r_result .= get_footer($f_language);
 	return $r_result;
 }
 
-function get_header() {
+function get_header($f_language) {
 	$r_result = "
 	<HTML>
 	<HEAD>
@@ -557,15 +558,17 @@ function get_header() {
 	<IMG SRC=\"mailboxfolder/mailbox_gen_graphics/gmcgen03_mctitle.GIF\" NATURALSIZEFLAG=\"3\" HEIGHT=\"95\" WIDTH=\"137\" ALIGN=\"BOTTOM\"></CENTER></P>
     ";
 	$r_result .= "<table class=\"grader\"><tr><td>";
-
-	if ($f_language == 'S') {
-		$r_result = implode("",file("header_sp.tpl"));
-	} elseif ($f_language == 'F') {
-		$r_result = implode("",file("header.tpl"));
-	} else {
-		$r_result = implode("",file("header.tpl"));
+	switch ($f_language){
+		case 'S':
+			$r_result = implode("",file("header_sp.tpl"));
+			break;
+		case 'F':
+			$r_result = implode("",file("header_fr.tpl"));
+			break;
+		default:
+			$r_result = implode("",file("header.tpl"));
+			break;
 	}
-	
 	return $r_result;
 }
 

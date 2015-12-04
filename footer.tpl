@@ -1,27 +1,37 @@
-		</div><!-- end mainContent -->
-</div><!-- end mainContainer -->
-<!--Start Footer-->
-<div id="footer" class="fluid">
-    <div class="footerLinks"><p><a href="http://ubdavid.org/index.html">Home</a> |  <a href="http://ubdavid.org/youth-world/youth.html">Youth World</a> |  <a href="http://ubdavid.org/kids-world/kids.html">Kids World</a> |  <a href="http://ubdavid.org/advanced/advanced.html">Advanced</a> |  <a href="http://ubdavid.org/bible/bible.html">Bible Exploration</a> |  <a href="http://ubdavid.org/francais/index.html">Français</a> |  <a href="http://ubdavid.org/espanol/index.html">Español</a> |  <a href="http://ubdavid.org/organization/about-us.html">About Us</a> |  <a href="http://ubdavid.org/organization/about-us.html#personnel">Contact Us</a></p></div><!-- end footerLinks -->
-    
-    <div class="copyright">
-    <p>Copyright © 1998-2016 UB David &amp; I'll B Jonathan, Inc. Mailbox Club lessons © The Mailbox Club International; used by permission with adaptation for the Internet. All rights reserved.</p>
-    </div><!-- end copyright -->
-  </div><!-- end FOOTER -->  
-</div><!--end gridContainer-->
-
-<script src="../js/imgSizer.js"></script>
-<script src="../js/ios-orientationchange-fix.js"></script>
-<!-- this is for Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-1888143-1', 'auto');
-  ga('send', 'pageview');
-
+							<p></p>
+						</div>
+					</td>
+					<td width="10">&nbsp;</td>
+				</tr>
+			</table>
+			<!-- End Body Table --><csobj csref="../../web-data/Components/footer2.html" h="178" occur="31" t="Component" w="746"><!-- Begin Footer Table -->
+				<table border="0" cellpadding="0" cellspacing="0" width="580" bgcolor="white">
+					<tr>
+						<td width="10">&nbsp;</td>
+						<td width="560">
+							<hr>
+							<div align="center">
+								<p><a href="../index.html" title="Home Page of UBDavid">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="/ubdavidfolder/online.html" title="anchor page for Online Lessons section">Online Lessons</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../contact.html" title="Contact information for D&amp;J offices">Contact D&amp;J</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+									<script language=javascript><!--
+var username = "cummins";
+var hostname = "bibleteach.org";
+var linktext = "Email WebServant";
+document.write("<a href=" + "mail" + "to:" + username +
+"@" + hostname + ">" + linktext + "</a>")
+//-->
 </script>
-</body>
+									<br>
+									<br>
+									<span class="footertext">Copyright &copy; 2003 U.B. David &amp;&nbsp;I'll B. Jonathan, Inc.<br>
+										Mailbox Club Lessons Copyright &copy; 1997-2003, The Mailbox Club International;<br>
+										used by permission with adaptation for the Internet by Vaughan V. Durston, president, UB David and I'll B Jonathan Inc.<br>
+										All rights reserved.</span></p>
+								<p></p>
+							</div>
+						</td>
+						<td width="10">&nbsp;</td>
+					</tr>
+				</table>
+				<!-- End Footer Table --></csobj></div>
+	</body>
 </html>

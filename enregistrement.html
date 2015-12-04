@@ -1,0 +1,603 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title>Formulaire d'Inscription d'un Nouvel Utilisateur</title>
+<meta name="description" content="Inscription pour les leçons gratuites de Bible pour tous les âges; UB David &amp; I'll B Jonathan" />
+<meta name="keywords" content="leçons bibliques pour les jeunes, les enseignements de la Bible pour les ados, David Jonathan, Jésus, Parole-par-Poste, UB David" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="author" content="Jerry Durston, President" />
+<meta name="author" content="Brian Cummins, Web Designer" />
+<link href="../css/boilerplate.css" rel="stylesheet" type="text/css"> <!-- these 3 css files need absolute addresses before final upload -->
+<link href="../css/lessons-common.css" rel="stylesheet" type="text/css">
+<link href="../css/lessons-french.css" rel="stylesheet" type="text/css">
+<link href="registration.css" rel="stylesheet" type="text/css"> <!-- this css file needs to be uploaded to "secure" subdomain -->
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="http://ubdavid.org/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://ubdavid.org/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://ubdavid.org/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://ubdavid.org/images/apple-touch-icon-144x144.png">
+<link rel="icon" type="image/png" href="http://ubdavid.org/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://ubdavid.org/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="http://ubdavid.org/images/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileImage" content="http://ubdavid.org/images/mstile-144x144.png">
+<meta name="msapplication-config" content="http://ubdavid.org/images/browserconfig.xml">
+
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="//use.edgefonts.net/amaranth:n4:default.js" type="text/javascript"></script>
+<script src="//use.edgefonts.net/droid-serif.js"></script>
+<script>
+	function verify_element(elem, msg) {
+		if (elem.type != null) {
+			lType = elem.type;
+			lFocus = elem;
+		} else {
+			lType = elem[0].type;
+			lFocus = elem[0];
+		}
+		valid = true;
+		switch (lType) {
+			// Text fields
+			case "text":
+			case "textarea":
+				if (elem.value == "") {valid=false;}
+				break;
+
+			// Drop-down validation, Assume first option is "Please select from List"
+			case "select-one":
+			case "select-multiple":
+				if (elem.selectedIndex == 0) {valid=false;}
+				break;
+
+			// Checkbox validation
+			case "checkbox":
+				valid = false;
+				for (counter = 0; counter < elem.length; counter++) {
+					if (elem[counter].checked) {
+						valid = true;
+					}
+				}
+				break;
+
+			// Checkbox validation
+			case "radio":
+				valid = false;
+				for (counter = 0; counter < elem.length; counter++) {
+					if (elem[counter].checked) {
+						valid = true;
+					}
+				}
+				break;
+		}
+
+		if (!valid) {
+			alert(msg);
+			lFocus.focus();
+			lRet = false;
+		} else {
+			lRet = true;
+		}
+
+		return lRet;
+	}
+
+	function verify(f) {
+
+		return  verify_element(f.id,'S\'il vous plaît entrer une ID utilisateur') &&
+                        verify_element(f.password,'S\'il vous plaît entrer un mot de passe') &&
+                        verify_element(f.lname,'S\'il vous plaît entrer un nom de famille') &&
+                        verify_element(f.prov,'S\'il vous plaît entrer une Province/État') &&
+                        verify_element(f.country,'S\'il vous plaît entrer un pays') &&
+                        verify_element(f.pcode,'S\'il vous plaît entrer un code postal') &&
+                        verify_element(f.city,'S\'il vous plaît entrer une ville') &&
+                        verify_element(f.email,'S\'il vous plaît entrer une adresse courriel');
+	}
+
+</SCRIPT>
+</head>
+
+<body>
+<div class="gridContainer clearfix">
+<a id="top"></a>
+  <div class="topHead fluid">
+    <div id="logo">   
+    </div>
+  </div><!--end topHead-->
+    <div id="nav" class="fluid"></div><!-- end NAV -->
+  <div id="breadcrumbs" class="fluid">
+    <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; <a href="http://ubdavid.org/francais/index.html">Français</a> &raquo; Inscription</div>
+     
+  <div id="mainContainer" class="fluid">
+
+    <div id="aside" class="fluid">
+		<p>&nbsp;</p>
+        <p><a href="http://ubdavid.org/francais/index.html">ACCUEIL</a></p>
+    </div><!-- end ASIDE -->
+
+    <div id="mainContent" class="fluid">
+		<div class="hide">
+        	<p><a href="http://ubdavid.org/francais/index.html">ACCUEIL</a></p>
+        </div>
+    <h1>Formulaire d'Inscription d'un Nouvel Utilisateur</h1></span>
+
+    <p>Veuillez soumettre autant de l'information demandée que possible. Ceci nous aidera à communiquer avec vous et facilitera notre tâche pour vous aider durant les leçons en ligne. Notez que les champs marqués d'un <span class="strongRed">*</span> sont obligatoires.</p>
+    <p>Quand vous choisissez un <span class="bold">ID utilisateur</span>, celui-ci ne doit pas contenir plus que 8 caractères. Vous pouvez choisir n'importe quel nom, d'abord qu'il n'ait pas déjà été choisi. Si vous recevez un message d'erreur à l'effet que <span class="italic">« ce compte existe déjà »</span>, veuillez essayer une nouvelle ID utilisateur. Vous devez ensuite inscrire votre <span class="bold">mot de passe</span> (encore avec un maximum de 8 caractères). Vous aurez besoin de votre ID utilisateur ET de votre mot de passe pour compléter les leçons. </p>
+    <p>Assurez-vous de <span class="bold">noter votre ID utilisateur et mot de passe</span> pour compléter les Pages des Questions.</p>
+    <p class="smallText">(Notre Politique de Confidentialité est disponible <a href="http://ubdavid.org/francais/declaration-confidentialite.html">ici</a>).</p>
+
+<hr width="90%">
+
+<div id="form">
+<form method=post  onSubmit="return verify(this);" name=MyForm>
+	<input type=hidden name=f_action value=student_new>
+	<input type=hidden name=source value=Internet>
+	
+	<p>
+		<label for "fname"><span class="strongRed">*</span>Prénom :</label>
+		<input type="text" name="fname" class="text" id="fname" tabindex="10" value="" />
+	</p>
+
+	<p>
+		<label for "lname"><span class="strongRed">*</span>Nom de famille :</label>
+		<input type="text" name="lname" class="text" id="lname" tabindex="20" value="">
+	</p>
+
+	<p>
+		<label for "email"><span class="strongRed">*</span>Adresse courriel :</label>
+		<input type="text" name="email" class="text" id="email" tabindex="30" value="">
+	</p>
+
+	<p><span class="bold">Veuillez choisir une ID UTILISATEUR et un MOT DE PASSE uniques (8 caractères max.)</span></p>
+	<p class="inline">
+		<label for "id" class="inline"><span class="strongRed">*ID utilisateur :</span></label>
+		<input type="text" name="id" class="textShort" id="id" tabindex="40" value="" maxlength="8">
+		</p>
+	<p>	<label for "password" class="inline"><span class="strongRed">*Mot de Passe :</span></label>
+		<input type="text" name="password" class="textShort" id="password" tabindex="50" value="" maxlength="8">
+	</p>
+
+	<p class="inline">
+		Sexe : <label class="inline"><input type="radio" name="gender" id="gender" tabindex="60" value="M"> Homme</label>
+		<label class="inline"><input type="radio" name="gender" id="gender_01" tabindex="70" value="F"> Femme</label>
+		<label class="inline"><input type="radio" name="gender" id="gender_02" tabindex="80" value="Notdisclosed"> Non divulgué</label>
+	</p>
+
+	<p class="inline">
+		Date de naissance : <label class="inline">AA : <input type="text" name="yy" class="textXtraShort" id="yy" tabindex="90" value=""></label>
+		<label class="inline">MM : <input type="text" name="mm" class="textXtraShort" id="mm" tabindex="100" value=""></label>
+		<label class="inline">JJ : <input type="text" name="dd" class="textXtraShort" id="dd" tabindex="110" value=""></label>
+	</p>
+
+	<p>
+		<label for "coname">a/s Nom (ex. parent) : </label>
+		<input type="text" name="coname" class="text" id="coname" tabindex="120" value="">
+	</p>
+
+	<p>
+		<label for "parentemail">Si moins de 18 ans, veuillez donner l'adresse COURRIEL de vos parents : </label>
+		<br /><input type="text" name="parentemail" class="text" id="parentemail" tabindex="130" value="">
+	</p>
+	<p>
+		<label for "pcode"><span class="strongRed">*</span>Code postal : </label>
+		<input type="text" name="pcode" class="textShort" id="pcode" tabindex="150" value="">
+	</p>
+
+	<p>
+		<label for "city"><span class="strongRed">*</span>Ville : </label>
+		<input type="text" name="city" class="text" id="city" tabindex="160" value="">
+	</p>
+
+	<p>
+		<label for "prov"><span class="strongRed">*</span>Province/État : </label>
+
+		<select name="prov" size="1">
+			<option value="XX">Choisir un:</option>
+			<option value="OT">OT - Non Spécifié</option>
+			<optgroup label="CANADA">
+				<option value="AB">AB - Alberta</option>
+				<option value="BC">BC - British Columbia</option>
+				<option value="MB">MB - Manitoba</option>
+				<option value="NB">NB - New Brunswick</option>
+
+				<option value="NF">NF - Newfoundland</option>
+				<option value="NS">NS - Nova Scotia</option>
+				<option value="NW">NW - Northwest Territories</option>
+				<option value="ON">ON - Ontario</option>
+				<option value="PE">PE - Prince Edward Island</option>
+				<option value="QC">QC - Quebec</option>
+
+				<option value="SK">SK - Saskatchewan</option>
+				<option value="YT">YT - Yukon Territory</option>
+			</optgroup>
+			<optgroup label="UNITED STATES OF AMERICA">
+				<option value="AL">AL - Alabama</option>
+				<option value="AK">AK - Alaska</option>
+
+				<option value="AZ">AZ - Arizona</option>
+				<option value="AR">AR - Arkansas</option>
+				<option value="CA">CA - California</option>
+				<option value="CO">CO - Colorado</option>
+				<option value="CT">CT - Connecticut</option>
+				<option value="DE">DE - Delaware</option>
+
+				<option value="DC">DC - District of Columbia</option>
+				<option value="FL">FL - Florida</option>
+				<option value="GA">GA - Georgia</option>
+				<option value="HI">HI - Hawaii</option>
+
+				<option value="ID">ID - Idaho</option>
+				<option value="IL">IL - Illinois</option>
+				<option value="IN">IN - Indiana</option>
+				<option value="IA">IA - Iowa</option>
+				<option value="KS">KS - Kansas</option>
+				<option value="KY">KY - Kentucky</option>
+
+				<option value="LA">LA - Louisiana</option>
+				<option value="ME">ME - Maine</option>
+				<option value="MD">MD - Maryland</option>
+				<option value="MA">MA - Massachusetts</option>
+				<option value="MI">MI - Michigan</option>
+
+				<option value="MN">MN - Minnesota</option>
+				<option value="MS">MS - Mississippi</option>
+				<option value="MO">MO - Missouri</option>
+				<option value="MT">MT - Montana</option>
+				<option value="NE">NE - Nebraska</option>
+				<option value="NV">NV - Nevada</option>
+
+				<option value="NH">NH - New Hampshire</option>
+				<option value="NJ">NJ - New Jersey</option>
+				<option value="NM">NM - New Mexico</option>
+				<option value="NY">NY - New York</option>
+				<option value="NC">NC - North Carolina</option>
+				<option value="ND">ND - North Dakota</option>
+
+				<option value="OH">OH - Ohio</option>
+				<option value="OK">OK - Oklahoma</option>
+				<option value="OR">OR - Oregon</option>
+				<option value="PA">PA - Pennsylvania</option>
+
+				<option value="RI">RI - Rhode Island</option>
+				<option value="SC">SC - South Carolina</option>
+				<option value="SD">SD - South Dakota</option>
+				<option value="TN">TN - Tennessee</option>
+				<option value="TX">TX - Texas</option>
+
+				<option value="UT">UT - Utah</option>
+				<option value="VT">VT - Vermont</option>
+				<option value="VA">VA - Virginia</option>
+				<option value="WA">WA - Washington</option>
+				<option value="WV">WV - West Virginia</option>
+
+				<option value="WI">WI - Wisconsin</option>
+				<option value="WY">WY - Wyoming</option>
+			</optgroup>
+			<optgroup label="AUSTRALIA">
+				<option value="ACT" >ACT - Australian Capital Territory</option>
+				<option value="NT">NT - Northern Territory</option>
+				<option value="NSW">NSW - New South Wales</option>
+				<option value="Qld">Qld - Queensland</option>
+				<option value="SA">SA - South Australia</option>
+				<option value="Tas">Tas - Tasmania</option>
+				<option value="Vic">Vic - Victoria</option>
+				<option value="WAu">WAu - Western Australia</option>
+			</optgroup>
+		</select>
+	</p>
+
+	<p>
+		<label for "country"><span class="strongRed">*</span>Pays : </label>
+		<select name="country" size="1">
+			<option value="XX">Choisir un:</option>
+			<option value="CA">Canada (CA)</option>
+			<option value="US">United States of America (US)</option>
+			<option value="AU" >Australia (AU)</option>
+			<option value="ZZ"></option>
+            
+			<option value="AF">Afganistan (AF)</option>
+			<option value="AL">Albania (AL)</option>
+			<option value="DZ">Algeria (DZ)</option>
+			<option value="AS">American Samoa (AS)</option>
+			<option value="AD">Andorra (AD)</option>
+			<option value="AO">Angola (AO)</option>
+
+			<option value="AI">Anguilla (AI)</option>
+			<option value="AQ">Antarctica (AQ)</option>
+			<option value="AG">Antigua and Barbuda (AG)</option>
+			<option value="AR">Argentina (AR)</option>
+			<option value="AM">Armenia (AM)</option>
+			<option value="AW">Aruba (AW)</option>
+
+			<option value="AT">Austria (AT)</option>
+			<option value="AZ">Azerbaijan (AZ)</option>
+			<option value="BS">Bahamas (BS)</option>
+			<option value="BH">Bahrain (BH)</option>
+			<option value="BD">Bangladesh (BD)</option>
+
+			<option value="BB">Barbados (BB)</option>
+			<option value="BY">Belarus (BY)</option>
+			<option value="BE">Belgium (BE)</option>
+			<option value="BZ">Belize (BZ)</option>
+			<option value="BJ">Benin (BJ)</option>
+			<option value="BM">Bermuda (BM)</option>
+
+			<option value="BT">Bhutan (BT)</option>
+			<option value="BO">Bolivia (BO)</option>
+			<option value="BA">Bosnia and Herzegovina (BA)</option>
+			<option value="BW">Botswana (BW)</option>
+			<option value="BV">Bouvet Island (BV)</option>
+			<option value="BR">Brazil (BR)</option>
+
+			<option value="IO">British Indian Ocean Territory (IO)</option>
+			<option value="BN">Brunei Darussalam (BN)</option>
+			<option value="BG">Bulgaria (BG)</option>
+			<option value="BF">Burkina Faso (BF)</option>
+			<option value="BI">Burundi (BI)</option>
+			<option value="KH">Cambodia (KH)</option>
+
+			<option value="CM">Cameroon (CM)</option>
+			<option value="CV">Cape Verde (CV)</option>
+			<option value="KY">Cayman Islands (KY)</option>
+			<option value="CF">Central African Republic (CF)</option>
+			<option value="TD">Chad (TD)</option>
+			<option value="CL">Chile (CL)</option>
+			<option value="CN">China (CN)</option>
+
+			<option value="CX">Christmas Island (CX)</option>
+			<option value="CC">Cocos (Keeling) Islands (CC)</option>
+			<option value="CO">Colombia (CO)</option>
+			<option value="KM">Comoros (KM)</option>
+			<option value="CG">Congo (CG)</option>
+			<option value="CK">Cook Islands (CK)</option>
+
+			<option value="CR">Costa Rica (CR)</option>
+			<option value="CI">Cote D'Ivoire (Ivory Coast)(CI)</option>
+			<option value="HR">Croatia (Hrvatska)(HR)</option>
+			<option value="CU">Cuba (CU)</option>
+			<option value="CY">Cyprus (CY)</option>
+			<option value="CZ">Czech Republic (CZ)</option>
+
+			<option value="CS">Czechoslovakia (former)(CS)</option>
+			<option value="DK">Denmark (DK)</option>
+			<option value="DJ">Djibouti (DJ)</option>
+			<option value="DM">Dominica (DM)</option>
+			<option value="DO">Dominican Republic (DO)</option>
+			<option value="TP">East Timor (TP)</option>
+
+			<option value="EC">Ecuador (EC)</option>
+			<option value="EG">Egypt (EG)</option>
+			<option value="GQ">Equatorial Guinea (GQ)</option>
+			<option value="ER">Eritrea (ER)</option>
+			<option value="EE">Estonia (EE)</option>
+			<option value="ET">Ethiopia (ET)</option>
+
+			<option value="FK">Falkland Islands (Malvinas)(FK)</option>
+			<option value="FO">Faroe Islands (FO)</option>
+			<option value="FJ">Fiji (FJ)</option>
+			<option value="FI">Finland (FI)</option>
+			<option value="FR">France (FR)</option>
+			<option value="FX">France, Metropolitan (FX)</option>
+
+			<option value="GF">French Guiana (GF)</option>
+			<option value="PF">French Polynesia (PF)</option>	
+			<option value="TF">French Southern Territories (TF)</option>	
+			<option value="GA">Gabon (GA)</option>
+			<option value="GM">Gambia (GM)</option>
+			<option value="GE">Georgia (GE)</option>
+			<option value="DE">Germany (DE)</option>
+
+			<option value="GH">Ghana (GH)</option>
+			<option value="GI">Gibraltar (GI)</option>
+			<option value="GR">Greece (GR)</option>
+			<option value="GL">Greenland (GL)</option>
+			<option value="GD">Grenada (GD)</option>
+			<option value="GU">Guam (GU)</option>
+
+			<option value="GP">Guadeloupe (GP)</option>
+			<option value="GT">Guatemala (GT)</option>
+			<option value="GN">Guinea (GN)</option>
+			<option value="GW">Guinea-Bissau (GW)</option>
+			<option value="GY">Guyana (GY)</option>
+			<option value="HT">Haiti (HT)</option>
+
+			<option value="HM">Heard and McDonald Islands (HM)</option>
+			<option value="HN">Honduras (HN)</option>
+			<option value="HK">Hong Kong (HK)</option>
+			<option value="HU">Hungary (HU)</option>
+			<option value="IS">Iceland (IS)</option>
+			<option value="IN">India (IN)</option>
+
+			<option value="ID">Indonesia (ID)</option>
+			<option value="IQ">Iraq (IQ)</option>
+			<option value="IR">Iran (IR)</option>
+			<option value="IE">Ireland (IE)</option>
+			<option value="IL">Israel (IL)</option>
+			<option value="IT">Italy (IT)</option>
+
+			<option value="JM">Jamaica (JM)</option>
+			<option value="JP">Japan (JP)</option>
+			<option value="JO">Jordan (JO)</option>
+			<option value="KZ">Kazakhstan (KZ)</option>
+			<option value="KE">Kenya (KE)</option>
+			<option value="KI">Kiribati (KI)</option>
+
+			<option value="KP">Korea (North)(KP)</option>
+			<option value="KR">Korea (South)(KR)</option>
+			<option value="KW">Kuwait (KW)</option>
+			<option value="KG">Kyrgyzstan (KG)</option>
+			<option value="LA">Laos (LA)</option>
+			<option value="LV">Latvia (LV)</option>
+
+			<option value="LB">Lebanon (LB)</option>
+			<option value="LS">Lesotho (LS)</option>
+			<option value="LR">Liberia (LR)</option>
+			<option value="LY">Libya (LY)</option>
+			<option value="LI">Liechtenstein (LI)</option>
+			<option value="LT">Lithuania (LT)</option>
+
+			<option value="LU">Luxembourg (LU)</option>
+			<option value="MO">Macau (MO)</option>
+			<option value="MK">Macedonia (MK)</option>
+			<option value="MA">Morocco (MA)</option>
+			<option value="MC">Monaco (MC)</option>
+			<option value="MD">Moldova (MD)</option>
+
+			<option value="MG">Madagascar (MG)</option>
+			<option value="MW">Malawi (MW)</option>
+			<option value="MY">Malaysia (MY)</option>
+			<option value="MV">Maldives (MV)</option>
+			<option value="ML">Mali (ML)</option>
+			<option value="MT">Malta (MT)</option>
+
+			<option value="MH">Marshall Islands (MH)</option>
+			<option value="MQ">Martinique (MQ)</option>
+			<option value="MR">Mauritania (MR)</option>
+			<option value="MU">Mauritius (MU)</option>
+			<option value="YT">Mayotte (YT)</option>
+			<option value="MX">Mexico (MX)</option>
+
+			<option value="MM">Myanmar (MM)</option>
+			<option value="FM">Micronesia (FM)</option>
+			<option value="MN">Mongolia (MN)</option>
+			<option value="MS">Montserrat (MS)</option>
+			<option value="MZ">Mozambique (MZ)</option>
+			<option value="NA">Namibia (NA)</option>
+
+			<option value="NR">Nauru (NR)</option>
+			<option value="NP">Nepal (NP)</option>
+			<option value="NL">Netherlands (NL)</option>
+			<option value="AN">Netherlands Antilles (AN)</option>
+			<option value="NT">Neutral Zone (NT)</option>
+			<option value="NC">New Caledonia (NC)</option>
+
+			<option value="NZ">New Zealand (Aotearoa)(NZ)</option>
+			<option value="NI">Nicaragua (NI)</option>
+			<option value="NE">Niger (NE)</option>
+			<option value="NG">Nigeria (NG)</option>
+			<option value="NU">Niue (NU)</option>
+			<option value="NF">Norfolk Island (NF)</option>
+
+			<option value="MP">Northern Mariana Islands (MP)</option>
+			<option value="NO">Norway (NO)</option>
+			<option value="OM">Oman (OM)</option>
+			<option value="PK">Pakistan (PK)</option>
+			<option value="PA">Panama (PA)</option>
+			<option value="PG">Papua New Guinea (PG)</option>
+
+			<option value="PE">Peru (PE)</option>
+			<option value="PH">Philippines (PH)</option>
+			<option value="PT">Portugal (PT)</option>
+			<option value="QA">Qatar (QA)</option>
+			<option value="RE">Reunion (RE)</option>
+			<option value="RU">Russia (RU)</option>
+			<option value="RW">Rwanda (RW)</option>
+			<option value="KN">Saint Kitts and Nevis (KN)</option>
+			<option value="LC">Saint Lucia (LC)</option>
+			<option value="VC">Saint Vincent and the Grenadines (VC)</option>
+
+			<option value="WS">Samoa (WS)</option>
+			<option value="SN">Senegal (SN)</option>
+			<option value="SC">Seychelles (SC)</option>
+			<option value="SG">Singapore (SG)</option>
+			<option value="ZA">South Africa (ZA)</option>
+			<option value="GS">S. Georgia and S. Sandwich Isls.(GS)</option>
+			<option value="ES">Spain (ES)</option>
+			<option value="LK">Sri Lanka (LK)</option>
+
+			<option value="SW">Sweden (SW)</option>
+			<option value="CH">Switzerland (CH)</option>
+			<option value="TW">Taiwan (TW)</option>
+			<option value="TJ">Tajikistan (TJ)</option>
+			<option value="TZ">Tanzania (TZ)</option>
+			<option value="TH">Thailand (TH)</option>
+
+			<option value="TG">Togo (TG)</option>
+			<option value="TK">Tokelau (TK)</option>
+			<option value="TO">Tonga (TO)</option>
+			<option value="TT">Trinidad and Tobago (TT)</option>
+			<option value="TN">Tunisia (TN)</option>
+			<option value="TR">Turkey (TR)</option>
+
+			<option value="TM">Turkmenistan (TM)</option>
+			<option value="TV">Tuvalu (TV)</option>
+			<option value="UG">Uganda (UG)</option>
+			<option value="UA">Ukraine (UA)</option>
+			<option value="AE">United Arab Emirates (AE)</option>
+			<option value="UK">United Kingdom (UK)</option>
+
+			<option value="UY">Uruguay (UY)</option>
+			<option value="UM">US Minor Outlying Islands (UM)</option>
+			<option value="UZ">Uzbekistan (UZ)</option>
+			<option value="VU">Vanuatu (VU)</option>
+			<option value="VA">Vatican City State (Holy See)(VA)</option>
+			<option value="VE">Venezuela (VE)</option>
+
+			<option value="VN">Viet Nam (VN)</option>
+			<option value="VG">Virgin Islands (British)(VG)</option>
+			<option value="VI">Virgin Islands (U.S.)(VI)</option>
+			<option value="WF">Wallis and Futuna Islands (WF)</option>
+			<option value="EH">Western Sahara (EH)</option>
+			<option value="YE">Yemen (YE)</option>
+
+			<option value="YU">Yugoslavia (YU)</option>
+			<option value="ZR">Zaire (ZR)</option>
+			<option value="ZM">Zambia (ZM)</option>
+			<option value="ZW">Zimbabwe (ZW)</option>
+		</select>
+	</p>
+	<p>
+		<label for "jonathan">Le nom de mon Jonathan :
+		<br />(<span class="bold">seulement</span> si demandé)</label>
+		<input type="text" name="jonathan" class="text" id="jonathan" tabindex="210" value="">
+	</p>
+    <br>
+	<p>									
+		<input type="submit" class="submit" name="Submit Registration Form" value="Soumettre inscription" tabindex="220" border="0">
+	</p>
+</form>
+   </div><!-- end form ID -->
+
+    </div><!-- end mainContent -->
+
+  </div><!-- end mainContainer -->
+  <div id="footer" class="fluid">
+    <div class="centered linkages">
+      <p><a href="http://ubdavid.org/index.html">Home</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html">Accueil</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html#histoires1">Enfants</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html#chemin">Jeunesse</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html#vie1">Avancé</a> <span class="divider">|</span>
+        <script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%66%72%61%6e%63%61%69%73%40%75%62%64%61%76%69%64%2e%6f%72%67%22%3e%45%6d%61%69%6c%3c%2f%61%3e%27%29%3b'))</script>
+      </p>
+    </div>
+    <div class="copyright"><p>Droits d’auteur © 1998—2015 U.B. David + I’ll B. Jonathan, Inc. Parole-par-Poste le&ccedil;ons © The Mailbox Club International. Utilisé avec la permission avec adaptation pour Internet. Tous droits réservés.</p></div><!-- end copyright -->
+  
+</div><!-- end FOOTER -->
+  
+</div><!--end gridContainer-->
+
+<script src="../js/imgSizer.js"></script>
+<script src="../js/ios-orientationchange-fix.js"></script>
+<!-- this is for Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1888143-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

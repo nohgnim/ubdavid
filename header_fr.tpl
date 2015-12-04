@@ -11,18 +11,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<title>Inscripción del Usuarío Nuevo</title>
-<meta name="description" content="Inscripción por Lecciones Bíblicas gratis por Internet para personas de cualquier edad usando lecciones del Club del Buzón" />
-<meta name="keywords" content="jesucristo, jesus en el cielo, dios padre, exploradores de la biblia, libros de la biblia, Lecciones en Espa&ntilde;ol, lecciones desde la Biblia, temas para adolescentes, hora del cuento, ver y hacer, exploradores, vencedores, cielo, David Jonathan, Jes&uacute;s, el club del Buz&oacute;n" />
+<title>Formulaire d'Inscription d'un Nouvel Utilisateur</title>
+<meta name="description" content="Inscription pour les leçons gratuites de Bible pour tous les âges; UB David &amp; I'll B Jonathan" />
+<meta name="keywords" content="leçons bibliques pour les jeunes, les enseignements de la Bible pour les ados, David Jonathan, Jésus, Parole-par-Poste, UB David" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="cleartype" content="on">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="author" content="Jerry Durston, President" />
 <meta name="author" content="Brian Cummins, Web Designer" />
-<link href="../css/boilerplate.css" rel="stylesheet" type="text/css"><!-- these 3 css files need absolute addresses before final upload -->
+<link href="../css/boilerplate.css" rel="stylesheet" type="text/css"> <!-- these 3 css files need absolute addresses before final upload -->
 <link href="../css/lessons-common.css" rel="stylesheet" type="text/css">
-<link href="../css/lessons-spanish.css" rel="stylesheet" type="text/css">
+<link href="../css/lessons-french.css" rel="stylesheet" type="text/css">
 <link href="registration.css" rel="stylesheet" type="text/css"> <!-- this css file needs to be uploaded to "secure" subdomain -->
+
 <!-- FAVICONS -->
 <link rel="shortcut icon" href="../favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="http://ubdavid.org/images/apple-touch-icon-57x57.png">
@@ -96,12 +97,14 @@
 
 	function verify(f) {
 
-		return	verify_element(f.id,'Favor de escribir el nombre de usario') &&
-			verify_element(f.password,'Favor de escribir el contraseña') &&
-			verify_element(f.lname,'Favor de escribir su apellido') &&
-			verify_element(f.country,'Favor de escribir el nombre de su pais') &&
-			verify_element(f.city,'Favor de escribir el nombre de su cuidad') &&
-			verify_element(f.email,'Favor de escribir su correo electrónico');
+		return  verify_element(f.id,'S\'il vous plaît entrer une ID utilisateur') &&
+                        verify_element(f.password,'S\'il vous plaît entrer un mot de passe') &&
+                        verify_element(f.lname,'S\'il vous plaît entrer un nom de famille') &&
+                        verify_element(f.prov,'S\'il vous plaît entrer une Province/État') &&
+                        verify_element(f.country,'S\'il vous plaît entrer un pays') &&
+                        verify_element(f.pcode,'S\'il vous plaît entrer un code postal') &&
+                        verify_element(f.city,'S\'il vous plaît entrer une ville') &&
+                        verify_element(f.email,'S\'il vous plaît entrer une adresse courriel');
 	}
 
 </SCRIPT>
@@ -115,15 +118,14 @@
     </div>
   </div><!--end topHead-->
     <div id="nav" class="fluid"></div><!-- end NAV -->
-  
   <div id="breadcrumbs" class="fluid">
-    <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; <a href="http://ubdavid.org/espanol/index.html">Español</a> &raquo; Inscripción</div>
+    <p><a href="http://ubdavid.org/index.html">Home</a> &raquo; <a href="http://ubdavid.org/francais/index.html">Français</a> &raquo; Inscription</div>
      
   <div id="mainContainer" class="fluid">
 
     <div id="aside" class="fluid">
-    	<p>&nbsp;</p>
-        <p><a href="http://ubdavid.org/espanol/index.html">Inicio</a></p>
+		<p>&nbsp;</p>
+        <p><a href="http://ubdavid.org/francais/index.html">ACCUEIL</a></p>
     </div><!-- end ASIDE -->
 
     <div id="mainContent" class="fluid">

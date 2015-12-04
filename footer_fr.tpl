@@ -1,13 +1,13 @@
-		</div><!-- end mainContent -->
-</div><!-- end mainContainer -->
-<!--Start Footer-->
-<div id="footer" class="fluid">
-    <div class="footerLinks"><p><a href="http://ubdavid.org/index.html">Home</a> |  <a href="http://ubdavid.org/youth-world/youth.html">Youth World</a> |  <a href="http://ubdavid.org/kids-world/kids.html">Kids World</a> |  <a href="http://ubdavid.org/advanced/advanced.html">Advanced</a> |  <a href="http://ubdavid.org/bible/bible.html">Bible Exploration</a> |  <a href="http://ubdavid.org/francais/index.html">Français</a> |  <a href="http://ubdavid.org/espanol/index.html">Español</a> |  <a href="http://ubdavid.org/organization/about-us.html">About Us</a> |  <a href="http://ubdavid.org/organization/about-us.html#personnel">Contact Us</a></p></div><!-- end footerLinks -->
-    
-    <div class="copyright">
-    <p>Droits d'auteur © 2003 U.B. David &amp; I'll B. Jonathan, Inc. Mailbox Club Lessons Droits d.auteur © 1997-2016, The Mailbox Club International; utilisé avec permission et adapté pour l'Internet par Vaughan V. Durston, président, UB David and I'll B Jonathan Inc. Tous droits réservés</p>
-    </div><!-- end copyright -->
-  </div><!-- end FOOTER -->  
+  <div id="footer" class="fluid">
+    <div class="centered linkages">
+      <p><a href="http://ubdavid.org/index.html">Home</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html">Accueil</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html#histoires1">Enfants</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html#chemin">Jeunesse</a> <span class="divider">|</span> <a href="http://ubdavid.org/francais/index.html#vie1">AvancÃ©</a> <span class="divider">|</span>
+        <script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%66%72%61%6e%63%61%69%73%40%75%62%64%61%76%69%64%2e%6f%72%67%22%3e%45%6d%61%69%6c%3c%2f%61%3e%27%29%3b'))</script>
+      </p>
+    </div>
+    <div class="copyright"><p>Droits dâ€™auteur Â© 1998â€”2016 U.B. David + Iâ€™ll B. Jonathan, Inc. Parole-par-Poste le&ccedil;ons Â© The Mailbox Club International. UtilisÃ© avec la permission avec adaptation pour Internet. Tous droits rÃ©servÃ©s.</p></div><!-- end copyright -->
+  
+</div><!-- end FOOTER -->
+  
 </div><!--end gridContainer-->
 
 <script src="../js/imgSizer.js"></script>
